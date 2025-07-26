@@ -3,17 +3,14 @@ var s1 = ViewBag.students;
     var Title = ViewBag.Title;
 }
 
-
-
-<h1>Employee Details</h1>
-
+<h1>Student Details</h1>
 
 <div class="card" style="width: 18rem;">
     <div class="card-body">
         <h5 class="card-title">@s1.StdName</h5>
         <h6 class="card-subtitle mb-2 text-muted">Student Id: @s1.StdId</h6>
-        <h6 class="card-subtitle mb-2 text-muted">Employee Age: @s1.StdAddress</h6>
-        <h6 class="card-subtitle mb-2 text-muted">Employee Salary: @s1.StdAge</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Student Age: @s1.StdAddress</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Student Salary: @s1.StdAge</h6>
         <a href="~/Student/GetAll" class="btn btn-primary">Back</a>
     </div>
 </div>

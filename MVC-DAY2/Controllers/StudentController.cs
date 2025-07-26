@@ -66,7 +66,7 @@ namespace MVC_DAY2.Controllers
         public IActionResult ViewDetails(int id)
         {
             var std = students.FirstOrDefault(x => x.StdId == id);
-            ViewBag.Employee = std;
+            ViewBag.students = std;
             ViewBag.Title = "Student Details";
             return View();
         }

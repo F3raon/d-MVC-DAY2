@@ -8,7 +8,7 @@ namespace MVC_DAY2.Controllers
     public class StudentController : Controller
     {
         
-        static List<Student> students = new List<Student>()
+        static List<Student> Stds = new List<Student>()
         {
             
             new Student() { StdId = 1, StdName = "John Doe", StdAddress = "123 Main St", StdAge = 20 },
@@ -23,14 +23,14 @@ namespace MVC_DAY2.Controllers
 
         public IActionResult GetAll()     
         {
-          ViewBag.llStudents = students;
+          ViewBag.llStudents = Stds;
            return View();
        }
         
         public IActionResult ViewDetails(int id)
         {
-            var std = students.FirstOrDefault(x => x.StdId == id);
-            ViewBag.student = std;
+            var std = Stds.FirstOrDefault(x => x.StdId == id);
+            ViewBag.Student = std;
             ViewBag.Title = "Student Details";
             return View();
         }
@@ -43,7 +43,7 @@ namespace MVC_DAY2.Controllers
         public IActionResult ActualCreate(int id, string sname, int age, string address)
         {
             Student ss = new Student { StdId = id, StdName = sname, StdAge = age, StdAddress = address };
-            students.Add(ss);
+            Stds.Add(ss);
           
             return RedirectToAction("GetAll");
         }

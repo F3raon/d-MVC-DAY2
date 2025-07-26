@@ -1,0 +1,34 @@
+﻿<h1>Hello Students</h1>
+@{
+    var students = ViewBag.llStudents;
+}
+
+
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th scope="col">Student ID</th>
+            <th scope="col">Student Name</th>
+            <th scope="col">Student Address</th>
+            <th scope="col">Student Age</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ss in students)
+       {
+            <tr>
+                <th scope="row">@ss.StdId</th>
+                <td scope = "col">@ss.StdName</td>
+                <td scope = "col">@ss.StdAddress</td>
+                <td scope = "col">@ss.StdAge</td>
+                <td scope = "col">
+                    <a href="~/Student/ViewData/@ss.StdId" class="btn btn-primary">View Details</a>
+            </tr>
+		}
+
+    </tbody>
+    <tfoot>
+        <a href="~/Student/Create" class="btn btn-success">Add Student</a>
+    </tfoot>
+</table>

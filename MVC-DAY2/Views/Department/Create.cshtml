@@ -1,0 +1,26 @@
+﻿@model Department
+
+
+<h1 class="text-success">Create New Department</h1>
+
+
+<form action="~/Department/ActualCreate">
+
+    <label for="DeptId">Department Id</label>
+    <input type="Number" name="DeptId" />
+
+    <br />
+    <hr />
+    <br />
+
+    <label for="DeptName">Department Name</label>
+    <input type="Text" name="DeptName"/>
+
+    <br />
+    <hr />
+    <br />
+
+    <input type="submit" value="Add" class="btn btn-success" />
+    <a href="~/Department/GetAll" class="btn btn-secondary">Cancel</a>
+
+</form>

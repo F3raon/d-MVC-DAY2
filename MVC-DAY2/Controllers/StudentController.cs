@@ -1,40 +1,4 @@
-﻿//using Microsoft.AspNetCore.Mvc;
-//using MVC_DAY2.RepoDB;
-//using MVC_DAY2.Models;
-
-//namespace MVC_DAY2.Controllers
-//{
-//    public class StudentController : Controller
-//    {
-
-
-//        public IActionResult GetAll()
-//        {
-//           ViewBag.llStudents = repo.GetStudents();
-//            return View();
-//        }
-
-//        public IActionResult ViewData(int id)
-//        {
-//            var student = repo.GetStudents().FirstOrDefault(s => s.StdId == id);
-//           ViewBag.student = student;
-//            ViewBag.Title = "Student Details";
-//            return View();
-//        }
-//        public IActionResult Create()
-//        {
-//            return View();
-//        }
-
-//        public IActionResult ActualCreate(int id, string ename, int age, string address)
-//        {
-//            Student student = new Student { StdId = id, StdName = ename, StdAge = age, StdAddress = address };
-//            var s = RepoDB.repo.GetStudents();
-//            s.Add(student);
-//            return RedirectToAction("GetAll");
-//        }
-//    }
-//}
+﻿
 using Microsoft.AspNetCore.Mvc;
 using MVC_DAY2.Models;
 using MVC_DAY2.RepoDB;
@@ -66,7 +30,7 @@ namespace MVC_DAY2.Controllers
         public IActionResult ViewDetails(int id)
         {
             var std = students.FirstOrDefault(x => x.StdId == id);
-            ViewBag.students = std;
+            ViewBag.student = std;
             ViewBag.Title = "Student Details";
             return View();
         }
